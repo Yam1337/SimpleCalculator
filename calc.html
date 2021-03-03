@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Calculator</title>
+        <style>
+            body {
+                background-color:rgb(255, 255, 255);
+                background-image: url("https://designmodo.com/wp-content/uploads/2012/05/617.jpg");
+                background-repeat: repeat;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 128px;
+                background-color: rgba(0, 0, 0, 0.459);
+                color:rgb(255, 255, 255);
+                font-family: monospace;
+                margin-top: auto;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 12px 20px;
+            }
+            .logoimg {
+                display: flex;
+                width: 120px;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+            .button {
+                background-color: slateblue;
+                color: snow;
+                border-radius: 10%;
+                border-color: rgba(133, 67, 255, 0.712);
+                left: 5%;
+                top: 20%;
+                font-size: 64px;
+                text-align: center;
+                padding: 10px 28px;
+                margin: 10px;
+            }
+
+            .keyboard {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-flow: column wrap;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 12px 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class ="logo"><img class="logoimg" src="https://svgshare.com/i/Uc9.svg">Simple calculator</h1>
+        <br>
+        <br>
+        <div class="keyboard">
+        <div><input id="numbers" style="font-size: 50px" type="text" size="10" value="" readonly></div>
+        <br>
+        <br>
+        <div>
+            <button class ="button" id="num1">1</button>
+            <button class ="button" id="num2">2</button>
+            <button class ="button" id="num3">3</button></div>
+        <div>
+            <button class ="button" id="num4">4</button>
+            <button class ="button" id="num5">5</button>
+            <button class ="button" id="num6">6</button></div>
+        <div>
+            <button class ="button" id="num7">7</button>
+            <button class ="button" id="num8">8</button>
+            <button class ="button" id="num9">9</button>
+        </div>
+        <div>
+            <button class ="button" id="num0">0</button>
+            <button class ="button" id="numC">C</button>
+            <button class ="button" id="numequal">=</button>
+        </div>
+        <div>
+            <button class ="button" id="numplus">+</button>
+            <button class ="button" id="numminus">-</button>
+            <button class ="button" id="nummulti">*</button>
+            <button class ="button" id="numdevide">/</button>
+        </div>
+    </div>
+
+
+    <script>
+        /*var AddButton = function(par1, par2) {
+        var par1 = document.getElementById( par1 )
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            numbers.value +="7"
+        }
+        par1.addEventListener("click", onButtonClick);
+        }*/
+
+        //BUTTONS SCRIPTS
+
+        // BUTTON 1
+        var num1 = document.getElementById("num1")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="1"
+            }
+        }
+        num1.addEventListener("click", onButtonClick);
+        // BUTTON 2
+        var num2 = document.getElementById("num2")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="2"
+            }
+        }
+        num2.addEventListener("click", onButtonClick);
+        // BUTTON 3
+        var num3 = document.getElementById("num3")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="3"
+            }
+        }
+        num3.addEventListener("click", onButtonClick);
+        // BUTTON 4
+        var num4 = document.getElementById("num4")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="4"
+            }
+        }
+        num4.addEventListener("click", onButtonClick);
+        // BUTTON 5
+        var num5 = document.getElementById("num5")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value
+             +="5"
+            }
+        }
+        num5.addEventListener("click", onButtonClick);
+        // BUTTON 6
+        var num6 = document.getElementById("num6")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="6"
+            }
+        }
+        num6.addEventListener("click", onButtonClick);
+        // BUTTON 7
+        var num7 = document.getElementById("num7")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+        if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value
+             +="7"
+            }
+        }
+        num7.addEventListener("click", onButtonClick);
+        // BUTTON 8
+        var num8 = document.getElementById("num8")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0")) {
+            numbers.value +="8"
+            }
+        }
+        num8.addEventListener("click", onButtonClick);
+        // BUTTON 9
+        var num9 = document.getElementById("num9")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            console.log(numbers.value.length, numbers.value.slice(-1))
+            if ((numbers.value !== "0" && numbers.value.slice(-1) !== 0) && (numbers.value.slice(-2) !== "-0" && numbers.value.slice(-2) !== "+0" && numbers.value.slice(-2) !== "*0" && numbers.value.slice(-2) !== "/0"))
+            {     numbers.value +="9"
+                }
+            }
+        num9.addEventListener("click", onButtonClick);
+        // BUTTON 0
+        var num0 = document.getElementById("num0")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if (numbers.value.length === 1 && numbers.value.slice(-1) === "0") {
+                numbers.value = "0"
+            }
+            else if (numbers.value.slice(-2) != "-0" && numbers.value.slice(-2) != "+0" && numbers.value.slice(-2) != "*0" && numbers.value.slice(-2) != "-/0") {
+                numbers.value +="0"
+            }
+        }
+        num0.addEventListener("click", onButtonClick);
+        // MATH
+        //var allnums = [];
+        var value1 = "";
+        var value2 = "";
+        var math = "";
+        // BUTTON C
+        var numC = document.getElementById("numC")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            math = "";
+            numbers.value="";
+        }
+        numC.addEventListener("click", onButtonClick);
+        // BUTTON +
+        var numplus = document.getElementById("numplus")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if (numbers.value.slice(-1) != "+" && numbers.value.slice(-1) != "-" && numbers.value.slice(-1) != "*" && numbers.value.slice(-1) != "/" && numbers.value.length >= 1) {
+                numbers.value += "+";
+            }
+        }
+        numplus.addEventListener("click", onButtonClick);
+        // BUTTON -
+        var numplus = document.getElementById("numminus")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if (numbers.value.slice(-1) != "+" && numbers.value.slice(-1) != "-" && numbers.value.slice(-1) != "*" && numbers.value.slice(-1) != "/") {
+                math = "-";
+                numbers.value += math;
+            }
+        }
+        numminus.addEventListener("click", onButtonClick);
+        // BUTTON *
+        var nummulti = document.getElementById("nummulti")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if (numbers.value.slice(-1) != "+" && numbers.value.slice(-1) != "-" && numbers.value.slice(-1) != "*" && numbers.value.slice(-1) != "/" && numbers.value.length >= 1) {
+                numbers.value += "*";
+            }
+        }
+        nummulti.addEventListener("click", onButtonClick);
+        // BUTTON /
+        var numdevide = document.getElementById("numdevide")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            if (numbers.value.slice(-1) != "+" && numbers.value.slice(-1) != "-" && numbers.value.slice(-1) != "*" && numbers.value.slice(-1) != "/" && numbers.value.length >= 1) {
+                numbers.value += "/";
+            }
+        }
+        numdevide.addEventListener("click", onButtonClick);
+        // BUTTON =
+        var numequal = document.getElementById("numequal")
+        var numbers = document.getElementById("numbers")
+        var onButtonClick = function() {
+            var equal = numbers.value;
+            var sum = eval(equal);
+            numbers.value = sum;
+            }
+
+        numequal.addEventListener("click", onButtonClick);
+
+        //parseInt(numbers.value);
+
+    </script>
+    </body>
+</html>
